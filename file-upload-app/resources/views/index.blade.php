@@ -11,6 +11,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>File</th>
@@ -20,6 +21,7 @@
         <tbody>
             @foreach($user as $user)
                 <tr>
+                    <td>{{$user->id}}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>
