@@ -12,8 +12,8 @@
             <h2>{{ $user->name }}</h2>
         </div>
         <div class="card-body">
-            <p><strong>Email:</strong> {{ $user->email }}</p>
             <P><strong>Id:</strong> {{$user->id}}</P>
+            <p><strong>Email:</strong> {{ $user->email }}</p>
             <p><strong>Created At:</strong> {{ $user->created_at->format('d/m/Y') }}</p>
             <p><strong>Updated At:</strong> {{ $user->updated_at->format('d/m/Y') }}</p>
             @if($user->file_path)
