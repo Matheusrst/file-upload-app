@@ -11,6 +11,8 @@ class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
+     *
+     * @return
      */
     public function index()
     {
@@ -19,9 +21,11 @@ class UserController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+   /**
+    * Show the form for creating a new resource.
+    *
+    * @return 
+    */
     public function create()
     {
         return view('create');
@@ -29,6 +33,8 @@ class UserController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     *
+     * @param Request $request
      */
     public function store(Request $request)
     {
@@ -52,6 +58,8 @@ class UserController extends Controller
 
     /**
      * Display the specified resource.
+     *
+     * @param User $user
      */
     public function show(User $user)
     {
@@ -60,6 +68,8 @@ class UserController extends Controller
 
     /**
      * Show the form for editing the specified resource.
+     *
+     * @param User $user
      */
     public function edit(User $user)
     {
@@ -68,6 +78,9 @@ class UserController extends Controller
 
     /**
      * Update the specified resource in storage.
+     *
+     * @param Request $request
+     * @param User $user
      */
     public function update(Request $request, User $user) {
         $validated = $request->validate([
@@ -96,6 +109,8 @@ class UserController extends Controller
     }
     /**
      * Remove the specified resource from storage.
+     *
+     * @param User $user
      */
     public function destroy(User $user)
     {
